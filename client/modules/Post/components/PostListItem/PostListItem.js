@@ -31,7 +31,6 @@ PostListItem.propTypes = {
   post: PropTypes.shape({
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    voteCount: PropTypes.number.isRequired,
     content: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     cuid: PropTypes.string.isRequired,
