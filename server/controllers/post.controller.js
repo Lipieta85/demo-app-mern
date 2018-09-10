@@ -88,21 +88,21 @@ export function deletePost(req, res) {
   });
 }
 
-export function thumbUp(req, res) {
-  Post.findOneAndUpdate({ cuid: req.params.cuid }, { $inc: { voteCount: 1 } }, { new: true }, (err, posts) => {
+export function thumbUpPost(req, res) {
+  Post.findOneAndUpdate({ cuid: req.params.cuid }, { $inc: { voteCount: 1 } }, { new: true }, (err, post) => {
     if (err) {
       res.status(500).send(err);
     }
-    res.json({ posts });
+    res.json(post);
   });
 }
 
-export function thumbDown(req, res) {
-  Post.findOneAndUpdate({ cuid: req.params.cuid }, { $inc: { voteCount: -1 } }, { new: true }, (err, posts) => {
+export function thumbDownPost(req, res) {
+  Post.findOneAndUpdate({ cuid: req.params.cuid }, { $inc: { voteCount: -1 } }, { new: true }, (err, post) => {
     if (err) {
       res.status(500).send(err);
     }
-    res.json({ posts });
+    res.json(post);
   });
 }
 

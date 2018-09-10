@@ -8,7 +8,7 @@ import { injectIntl, FormattedMessage } from 'react-intl';
 import styles from '../../components/PostListItem/PostListItem.css';
 
 // Import Actions
-import { fetchPost, editPostRequest } from '../../PostActions';
+import { fetchPost, editPostRequest, thumbUp } from '../../PostActions';
 import { toggleEditPost } from '../../../App/AppActions';
 
 // Import Selectors
